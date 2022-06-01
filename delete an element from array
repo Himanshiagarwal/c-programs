@@ -1,0 +1,17 @@
+#include <stdio.h>
+#define size 100
+void main()
+{
+int a[size]={},n,pos;
+printf("Enter size of array:");
+scanf("%d",&n);
+printf("Enter elements of array:");
+for (int i=0;i<n;i++)
+scanf("%d",&a[i]);
+printf("Enter postion of element for deletion:");
+scanf("%d",&pos);
+for (int i=pos-1;i<n;i++)
+    a[i]=a[i+1];
+for (int i=0;i<n-1;i++)
+printf("%d ",a[i]);
+}
