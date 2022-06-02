@@ -1,0 +1,22 @@
+#include<stdio.h>
+void main()
+{
+	int i,m,n,*ptr,c=0;
+	printf("enter count of numbers u want to input in an array");
+	scanf("%d",&m);
+	printf("enter number:");
+	for(i=0;i<m;i++)
+	{
+		scanf("%d",ptr+i);
+	}
+	scanf("%d",&n);
+	for(i=0;i<m;i++)
+	{
+		if(n==*(ptr+i))
+		c++;
+	}
+	if(c>0)
+	printf("frequency of %d is %d",n,c);
+	else
+	printf("element not found ");
+}
