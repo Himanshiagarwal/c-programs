@@ -1,0 +1,16 @@
+#include<stdio.h>
+void main()
+{
+	int *p,*q,*r,a,b,c;
+	printf("enter three numbers ");
+	scanf("%d%d%d",&a,&b,&c);
+	p=&a;
+	q=&b;
+	r=&c;
+	if(*p>*q&&*p>*r)
+	printf("greatest among all three is %d ",*p);
+	else if(*q>*p&&*q>*r)
+	printf("greatest in all three is %d ",*q);
+	else
+	printf("greatest is %d ",*r);
+}
