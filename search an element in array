@@ -1,0 +1,25 @@
+#include<stdio.h>
+void main()
+{
+	int m,n,*p,c=0,i;
+	scanf("%d",&m);
+	int a[m];
+	for(i=0;i<m;i++)
+	{
+		scanf("%d",&a[i]);
+	}	
+	printf("enter a number u want to search in an array");
+	scanf("%d",&n);
+	for(i=0;i<m;i++)
+	{
+		p=&a[i];
+		if(*p==n)
+		{
+			c++;
+		}
+	}	
+		if(c>0)
+		printf("found ");
+		else
+		printf(" not found ");
+}
