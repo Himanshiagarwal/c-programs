@@ -1,0 +1,31 @@
+#include<stdio.h>
+int main()
+{
+	int i,j,m,n,sum=0;
+	printf("enter number of rows and columns ");
+	scanf("%d%d",&m,&n);
+	int a[m][n];
+	float avg;
+	printf("elements in 2D array are ");
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		scanf("%d",&a[i][j]);
+	}	
+	for(i=0;i<m;i++)
+	{
+		printf("\n");
+		for(j=0;j<n;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+	}
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		sum+=a[i][j];
+	}
+	avg=float(sum)/(m*n);
+	printf("sum of all elements of an array is %d and average is %f",sum,avg);
+	return 0;
+}
