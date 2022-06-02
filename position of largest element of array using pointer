@@ -1,0 +1,22 @@
+#include<stdio.h>
+void main()
+{
+	int i,m,*ptr,c=0,max;
+	printf("enter number of elements of array:");
+	scanf("%d",&m);
+	printf("enter elements:");
+	for(i=0;i<m;i++)
+	{
+		scanf("%d",ptr+i);
+	}
+	max=*ptr;
+	for(i=0;i<m;i++)
+	{
+		if(*(ptr+i)>max)
+		{
+			max=*(ptr+i);
+			c++;
+		}
+	}
+	printf("max occurs at %d position ",c+1);	
+}
