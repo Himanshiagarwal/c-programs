@@ -1,0 +1,41 @@
+#include<stdio.h>
+int main()
+{
+	int i,j,m,n,sum1=0,sum2=0;
+	printf("enter number of rows and columns ");
+	scanf("%d%d",&m,&n);
+	int a[m][n];
+	printf("elements in 2D array are ");
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		scanf("%d",&a[i][j]);
+	}	
+	printf("\n2D array in matrix form is \n");
+	for(i=0;i<m;i++)
+	{
+		printf("\n");
+		for(j=0;j<n;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+	}
+	if(m==n)
+	{
+		for(i=0;i<m;i++)
+		{	
+			for(j=0;j<n;j++)
+			{
+				if(i==j)
+				sum1+=a[i][j];
+				if(i+j==m-1)
+				sum2+=a[i][j];
+			}
+		}
+		printf("\nsum of major diagonal is %d and sum of minor diagonal is %d",sum1,sum2);
+		return 0;
+	}
+	else
+	printf("\nmatrix is not square so diagonal cannot be determined ");
+	return 0;
+}
