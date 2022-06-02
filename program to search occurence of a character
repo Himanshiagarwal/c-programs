@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+	char s[100],ch;
+	int i;
+	printf("enter string ");
+	scanf("%[^\n]",s);
+	getchar();
+	ch=getchar();
+	printf("element if found at  ");
+	for(i=0;i<strlen(s);i++)
+	{
+		if(s[i]==ch)
+		{
+			printf("%d position,",i+1);
+			
+		}
+	}
+	return 0;
+}
