@@ -1,0 +1,9 @@
+#include<stdio.h>
+void main()
+{
+	int x,y,z,*p,*q,*r,max;
+	scanf("%d%d%d",&x,&y,&z);
+	p=&x;q=&y;r=&z;
+	max=(*p>*q&&*q>*r)?*p:(*q>*p&&*q>*r)?*q:*r;
+	printf("maximum =%d ",max);
+}
