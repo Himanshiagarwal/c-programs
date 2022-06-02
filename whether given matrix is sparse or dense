@@ -1,0 +1,38 @@
+#include<stdio.h>
+int main()
+{
+	int i,j,m,n,I=0,J=0;
+	printf("enter number of rows and columns ");
+	scanf("%d%d",&m,&n);
+	int a[m][n];
+	printf("elements in 2D array are ");
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		scanf("%d",&a[i][j]);
+	}	
+	printf("\n2D array in matrix form is \n");
+	for(i=0;i<m;i++)
+	{
+		printf("\n");
+		for(j=0;j<n;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+	}
+	for(i=0;i<m;i++)
+	{		
+		for(j=0;j<n;j++)
+		{
+			if(a[i][j]==0)
+			J++;
+			else if(a[i][j]!=0)
+			I++;
+		}
+	}
+	if(I>J)
+	printf("\nmatrix ix dense ");
+	if(J>I)
+	printf("\nmatrix is sparse ");
+	return 0;
+}
