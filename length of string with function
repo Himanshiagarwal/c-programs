@@ -1,0 +1,12 @@
+#include<string.h>
+#include<stdio.h>
+int main()
+{
+	char s[100];
+	int count=0;
+	printf("enter the string of which you want to find the length");
+	gets(s);
+	count=strlen(s);
+	printf("%d",count);
+	return 0;	
+}
