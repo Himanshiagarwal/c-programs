@@ -1,0 +1,14 @@
+#include<stdio.h>
+void main()
+{
+	int *p,*q,**r,**s,a,b,t;
+	scanf("%d %d",&a,&b);
+	p=&a;
+	r=&p;
+	q=&b;
+	s=&q;
+	t=*(*r);
+	*(*r)=*(*s);
+	*(*s)=t;
+	printf("%d%d",*(*r),*(*s));
+}
