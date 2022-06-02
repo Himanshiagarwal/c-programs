@@ -1,0 +1,46 @@
+#include<stdio.h>
+int main()
+{
+	int i,j,m,n,I=0,J=0;
+	printf("enter number of rows and columns ");
+	scanf("%d%d",&m,&n);
+	int a[m][n];
+	printf("elements in 2D array are ");
+	for(i=0;i<m;i++)
+	{
+		for(j=0;j<n;j++)
+		scanf("%d",&a[i][j]);
+	}	
+	printf("\n2D array in matrix form is \n");
+	for(i=0;i<m;i++)
+	{
+		printf("\n");
+		for(j=0;j<n;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+	}
+	if(m==n)
+	{
+		for(i=0;i<m;i++)
+		{
+			for(j=0;j<n;j++)
+			{
+				if(i==j)
+				{
+					if(a[i][j]==1)	
+					I++;
+				}
+			else if(a[i][j]==0)
+			J++;
+			}
+		}
+		if(I+J==m*n)
+		printf("matrix is identity matrix ");
+		else 
+		printf("\n matrix is not identity matrix ");
+	}
+	else
+	printf("matrix is not square matrix ");
+	return 0;
+}
