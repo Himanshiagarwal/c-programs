@@ -1,0 +1,13 @@
+#include<stdio.h>
+#include<string.h>
+void main()
+{
+	int c=0;
+	char str[100],*p;
+	scanf("%[^\n]",str);
+	for(int i=strlen(str);i>=0;i--)
+	{
+		p=&str[i];
+		printf("%c",*p);
+	}
+}
