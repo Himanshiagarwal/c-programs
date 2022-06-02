@@ -1,0 +1,18 @@
+#include<stdio.h>
+int bill(float);
+int main()
+{
+	int mealc,total;
+	printf("enter meal charge\n");
+	scanf("%d",&mealc);
+	total=bill(mealc);
+	printf("total bill=%d",total);
+	return 0;
+}
+int bill(float mealc)
+{
+	float tax=20.0*mealc/100;
+	float tip=15.0*(mealc+tax)/100;
+	float total=tip+tax+mealc;
+	return(total);
+}
