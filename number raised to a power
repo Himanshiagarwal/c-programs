@@ -1,0 +1,20 @@
+#include<stdio.h>
+int power(int,int);
+int main()
+{
+	int a,b,pow;
+	printf("\nenter two numbers");
+	scanf("%d%d",&a,&b);
+	pow=power(a,b);
+	printf("\npower =%d",pow);
+	return 0;
+}
+int power(int x,int y)
+{
+	int prod=1,i;
+	for(i=0;i<y;i++)
+	{
+		prod*=x;
+	}
+	return(prod);
+}
