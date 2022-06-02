@@ -1,0 +1,12 @@
+#include<stdio.h>
+void main()
+{
+	int a,*p,prod=1,i;
+	scanf("%d",&a);
+	p=&a;
+	for(i=1;i<=*p;i++)
+	{
+		prod*=i;
+	}
+	printf("factorial of a number is %d ",prod);	
+}
