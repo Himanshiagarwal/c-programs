@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<math.h>
+void quad(float a,float b,float c);
+int main()
+{
+	float a,b,c,roots;
+	printf("enter coefficient \n");
+	scanf("%f%f%f",&a,&b,&c);
+	quad(a,b,c);
+	return 0;
+}
+quad(float a,float b,float c)
+{
+	if(a==0)
+	printf("invalid");
+	return ;
+	int d;
+	d=b*b-4*a*c;
+	d=sqrt(abs(d));
+	if(d>0)
+	printf("real and distinct\n");
+	else if(d==0)
+	printf("\n real and same");
+	else
+	printf("\n complex roots");	
+}
