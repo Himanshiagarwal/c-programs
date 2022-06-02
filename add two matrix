@@ -1,0 +1,54 @@
+#include<stdio.h>
+int main()
+{
+	int i,j,m1,n1,m2,n2;
+	printf("enter number of rows and columns of two matrices ");
+	scanf("%d%d%d%d",&m1,&n1,&m2,&n2);
+	int a[m1][n1],b[m2][n2],c[100][100];
+	printf("\nelements in both array are ");
+	for(i=0;i<m1;i++)
+	{
+		for(j=0;j<n1;j++)
+		scanf("%d",&a[i][j]);
+	}	
+	for(i=0;i<m2;i++)
+	{
+		for(j=0;j<n2;j++)
+		scanf("%d",&b[i][j]);
+	}	
+	printf("\n first matrix is \n");
+	for(i=0;i<m1;i++)
+	{
+		printf("\n");
+		for(j=0;j<n1;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+	}
+	printf("\n second matrix is \n");
+	for(i=0;i<m2;i++)
+	{
+		printf("\n");
+		for(j=0;j<n2;j++)
+		{
+			printf("%d\t",a[i][j]);
+		}
+	}
+	for(i=0;i<m2;i++)
+	{
+		for(j=0;j<n2;j++)
+		{
+			c[i][j]=a[i][j]+b[i][j];
+		}
+	}
+	printf("\nmatrix after summation is ");
+	for(i=0;i<m2;i++)
+	{
+		printf("\n");
+		for(j=0;j<n2;j++)
+		{
+			printf("%d\t",c[i][j]);
+		}
+	}
+	return 0;
+}
